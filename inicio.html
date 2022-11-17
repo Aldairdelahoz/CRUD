@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD CONTACTO</title>
+    <link rel="shortcut icon" href="assets/img/logo_cul_2015.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/icons/bootstrap-icons.css">
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="assets/img/logo_cul_2015.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+            CRUD CONTACTO
+          </a>
+          <div class="d-flex" role="search">
+            <div class="dropdown">
+                <a class="btn btn-dark dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Aldair De la hoz
+                </a>
+              
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="index.html"><i class="bi bi-box-arrow-right"></i> Cerrar sesión</a></li>
+                </ul>
+              </div>
+          </div>
+        </div>
+      </nav>
+      <div class="card text-center m-4">
+        <div class="card-header">
+          CRUD CONTACTO
+        </div>
+        <div class="card-body">
+            <div class="text-end mb-2">
+                <td><button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#agregarModal"><i class="bi bi-person-add"></i> Agregar Contacto</button></td>
+            </div>
+            <table class="table">
+                <thead class="table-dark">
+                  <tr>
+                    <td>Nombre</td>
+                    <td>Primer apellido</td>
+                    <td>Segundo apellido</td>
+                    <td>Telefono</td>
+                    <td>Correo</td>
+                    <td>Editar</td>
+                    <td>Eliminar</td>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Aldair</td>
+                        <td>De la hoz</td>
+                        <td>Ortiz</td>
+                        <td>3003706861</td>
+                        <td>aldairdelahoz15@hotmail.com</td>
+                        <td><button class="btn btn-primary"><i class="bi bi-pencil-square"></i> Editar</button></td>
+                        <td><button class="btn btn-light" onclick="fntdelpersona(2)"><i class="bi bi-trash"></i> Eliminar</button></td>
+                      </tr>
+                      <td>Aldair</td>
+                      <td>De la hoz</td>
+                      <td>Ortiz</td>
+                      <td>3003706861</td>
+                      <td>aldairdelahoz15@hotmail.com</td>
+                      <td><button class="btn btn-primary"><i class="bi bi-pencil-square"></i> Editar</button></td>
+                      <td><button class="btn btn-light" onclick="fntdelpersona(1)"><i class="bi bi-trash"></i> Eliminar</button></td>
+                    </tr>
+                </tbody>
+              </table>
+          
+        </div>
+        <div class="card-footer text-muted">
+          desing by: aldair de la hoz 2022
+        </div>
+      </div>
+      
+<!-- Modal -->
+<div class="modal fade" id="agregarModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Agregar Contacto</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="formAgregar">
+          <div class="mb-3">
+            <label for="Nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="Nombre" placeholder="Nombre">
+          </div>
+          <div class="mb-3">
+            <label for="a1" class="form-label">Primer Apellido</label>
+            <input type="text" class="form-control" id="a1" placeholder="Apellido">
+          </div>
+          <div class="mb-3">
+            <label for="a2" class="form-label">Segundo Apellido</label>
+            <input type="text" class="form-control" id="a2" placeholder="Apellido">
+          </div>
+          <div class="mb-3">
+            <label for="Telefono" class="form-label">Telefono</label>
+            <input type="tel" class="form-control" id="Telefono" placeholder="30000000">
+          </div>
+          <div class="mb-3">
+            <label for="Correo" class="form-label">Correo</label>
+            <input type="text" class="form-control" id="Correo" placeholder="aldair@hotmail.com">
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><i class="bi bi-x-circle"></i> cancelar</button>
+        <button type="button" class="btn btn-primary" ><i class="bi bi-save"></i> guardar</button>
+      </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/sweetalert2.all.min.js"></script>
+    <script src="assets/js/funcion.js"></script>
+</body>
+</html>
